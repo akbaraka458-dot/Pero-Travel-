@@ -1,0 +1,123 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; font-family: 'Montserrat', sans-serif; background: #f8f9fa; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* NAVBAR KOMPYUTER */
+        .navbar {
+          position: sticky; top: 0; background: #ffffff; z-index: 1000; padding: 20px 60px;
+          display: flex; justify-content: space-between; align-items: center;
+          border-bottom: 1px solid #f0f0f2; box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        .navbar.transparent-home { position: absolute; width: 100%; background: transparent; border-bottom: none; }
+        .parachute-gif-box { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .parachute-icon { font-size: 32px; color: #00a8b5; }
+        .transparent-home .parachute-icon { color: #ffffff; }
+        .travel-logo-text { color: #222; font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; letter-spacing: 3px; }
+        .transparent-home .travel-logo-text { color: #fff; }
+        .nav-links { display: flex; gap: 45px; }
+        .nav-links span { color: #444; font-weight: 600; font-size: 0.95rem; cursor: pointer; }
+        .transparent-home .nav-links span { color: #ffffff; }
+        .nav-links span.active-nav-link { color: #00a8b5 !important; border-bottom: 2px solid #00a8b5; }
+
+        /* HERO KOMPYUTER */
+        .hero { width: 100%; height: 100vh; position: relative; background: #000; overflow: hidden; display: flex; align-items: center; }
+        .video-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease; z-index: 1; }
+        .video-layer.active { opacity: 1; z-index: 2; }
+        .overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)); z-index: 3; }
+        .hero-content { position: relative; z-index: 10; padding-left: 80px; width: 100%; }
+        .main-title-box { position: relative; display: inline-block; padding: 20px 0; }
+        .travel-small { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 4px; display: block; line-height: 1; }
+        .pero-title { font-family: 'Bebas Neue', sans-serif; font-size: 8rem; color: transparent; -webkit-text-stroke: 2px #fff; display: block; line-height: 0.9; margin: 10px 0; }
+        .together-text, .with-text { font-family: 'Dancing Script', cursive; color: #f7c948; font-size: 2.8rem; position: absolute; z-index: 12; }
+        .together-text { top: 15px; left: 240px; transform: rotate(-5px); }
+        .with-text { bottom: 0px; left: 320px; transform: rotate(-5px); }
+        .media-label-display { margin-top: 20px; color: #fff; font-size: 1.1rem; }
+        .excursions-btn { margin-top: 25px; padding: 15px 40px; border: none; border-radius: 50px; background: linear-gradient(90deg, #00b4db, #0083b0); color: #fff; font-weight: 700; cursor: pointer; }
+
+        /* THUMBNAILS KOMPYUTER */
+        .thumb-wrapper { position: absolute; bottom: 40px; left: 0; width: 100%; z-index: 10; }
+        .thumb-container { display: flex; gap: 20px; padding: 0 80px; overflow-x: auto; scrollbar-width: none; }
+        .thumb-card { min-width: 240px; height: 140px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid transparent; position: relative; }
+        .thumb-card.active { border-color: #f7c948; transform: translateY(-4px); }
+        .thumb-card img { width: 100%; height: 100%; object-fit: cover; }
+        .popular-section { padding: 80px 60px; background: #fff; }
+        .pop-title { font-size: 2.5rem; color: #00a8b5; font-weight: 800; margin-bottom: 40px; }
+        .grid-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .exc-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .exc-card-img { width: 100%; height: 220px; object-fit: cover; }
+        .exc-card-body { padding: 25px; }
+        .exc-card-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 15px; }
+        .exc-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
+        .exc-price { font-weight: 800; font-size: 1.1rem; }
+
+        /* GALEREYA VA SHARHLAR KOMPYUTER */
+        .gallery-section, .reviews-section { padding: 60px; background: #fff; }
+        .gallery-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .gallery-grid-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; cursor: pointer; }
+        .reviews-slider-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .review-card { background: #f0f2f5; border-radius: 16px; padding: 30px; display: flex; gap: 20px; }
+        .review-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+
+        /* FORMA VA FOOTER KOMPYUTER */
+        .questions-section { display: flex; justify-content: flex-end; background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1800&auto=format&fit=crop') center/cover; min-height: 500px; }
+        .questions-blur-overlay { width: 45%; background: rgba(14, 31, 19, 0.85); backdrop-filter: blur(10px); padding: 60px; color: #fff; }
+        .input-group { position: relative; margin-bottom: 30px; }
+        .input-group input { width: 100%; background: transparent; border: none; border-bottom: 1px solid #fff; padding: 10px 0; color: #fff; }
+        .submit-form-btn { background: linear-gradient(135deg, #00b4db, #0083b0); color: #fff; border: none; padding: 15px 40px; border-radius: 50px; font-weight: 700; cursor: pointer; }
+        .footer-brand-row { display: flex; justify-content: space-between; padding: 40px 60px; background: #ffffff; border-top: 1px solid #eee; }
+        .footer-nav-side span { margin-right: 20px; cursor: pointer; font-weight: 600; }
+
+        /* =======================================================
+           ⚡️ MOBIL VERSIYA - ENG QISQA, TOZA VA O'RTAGA TEKISLANGAN ⚡️
+           ======================================================= */
+        @media (max-width: 768px) {
+          /* Asosiy flex markazlash */
+          .navbar, .hero-content, .main-title-box, .review-card, .footer-brand-row, .footer-nav-side {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            justify-content: center !important;
+          }
+
+          /* Mobil Navbar */
+          .navbar.transparent-home { position: relative; background: #ffffff; }
+          .transparent-home .travel-logo-text { color: #222; }
+          .transparent-home .parachute-icon { color: #00a8b5; }
+          .transparent-home .nav-links span { color: #444; }
+          .nav-links { gap: 15px; flex-wrap: wrap; }
+          
+          /* Mobil Hero Banner */
+          .hero { height: auto; min-height: 90vh; padding: 40px 0; }
+          .travel-small { font-size: 1.5rem; letter-spacing: 2px; }
+          .pero-title { font-size: 3.5rem; -webkit-text-stroke: 1px #fff; line-height: 1; margin: 10px 0; }
+          .together-text, .with-text { position: static; font-size: 1.8rem; margin: 5px 0; transform: none; color: #f7c948; }
+          .excursions-btn { width: 85%; max-width: 260px; padding: 12px 0; }
+ /* Gorizontal Videolar va Bloklar */
+          .thumb-wrapper { position: static; margin-top: 25px; width: 100%; }
+          .thumb-container { padding: 0 15px; gap: 10px; display: flex; overflow-x: auto; }
+          .thumb-card { min-width: 140px; height: 90px; }
+          
+          .popular-section, .gallery-section, .reviews-section { padding: 35px 15px; }
+          .pop-title { font-size: 1.6rem; margin-bottom: 20px; }
+          .grid-layout { grid-template-columns: 1fr; gap: 20px; }
+          .exc-card-img { height: 180px; }
+          .gallery-container { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+          .gallery-grid-item img { height: 120px; }
+
+          /* SHARHLAR (1-RASM MUAMMOSI YECHIMI) */
+          .reviews-slider-container { grid-template-columns: 1fr; gap: 20px; }
+          .review-card { padding: 25px 20px; gap: 15px; width: 100%; }
+          .review-avatar { width: 80px; height: 80px; }
+          .review-card div { width: 100%; }
+          .review-card p { font-size: 0.95rem !important; line-height: 1.5 !important; white-space: normal !important; }
+
+          /* FOOTER VA KONTAKTLAR (2-RASM MUAMMOSI YECHIMI) */
+          .questions-blur-overlay { width: 100%; padding: 35px 15px; }
+          .footer-brand-row { gap: 25px; padding: 35px 20px; width: 100%; }
+          .footer-brand-row div { width: 100%; display: flex; flex-direction: column; align-items: center; }
+          .footer-nav-side { gap: 12px; width: 100%; }
+          .footer-nav-side span, .footer-nav-side p, .footer-nav-side a, .footer-brand-row i { margin: 0 !important; }
+        }
